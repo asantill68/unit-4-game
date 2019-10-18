@@ -7,9 +7,8 @@ var score = 0;
 var target = Math.floor(Math.random() * 101) + 19;
 $("#target").html(target);
 
-//Assign differnt values to crystals
-
-
+//Create an array and use a for-loop to randomely assign values between 1 and 19 to each spot on array
+var crystalVal = [1, 3, 10, 15];
 
 //Target wins, losses and score in the html
 $("#wins").html("Wins: " + wins);
@@ -19,15 +18,19 @@ $("#score").html(score);
 
 //Assign on.Click to images
 $("#red-crystal").on("click", function () {
-    alert("You clicked me!!");
+    var redVal = crystalVal[0];
+    alert("Your current score is = " + redVal);
 });
 $("#blue-crystal").on("click", function () {
-    alert("You clicked me!!");
+    var blueVal = crystalVal[1];
+    alert("Your current score is = " + blueVal);    
 });
 $("#gold-crystal").on("click", function () {
-    alert("You clicked me!!");
+    var goldVal = crystalVal[2];
+    alert("Your current score is = " + goldVal); ;
 });
 $("#green-crystal").on("click", function () {
-    alert("You clicked me!!");
+    var greenVal = crystalVal[3];
+    alert("Your current score is = " + greenVal); 
 });
 
